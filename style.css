@@ -851,6 +851,27 @@ footer {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    /* Ensure all cards in a row have the same height */
+}
+
+.project-header-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.project-header-info h3 {
+    margin-bottom: 5px;
+    font-size: var(--font-size-h3);
+}
+
+.project-summary {
+    font-size: var(--font-size-base);
+    line-height: 1.8 !important;
+    color: #d4c5b9;
 }
 
 .project-img-placeholder {
@@ -869,6 +890,23 @@ footer {
     height: 100%;
     object-fit: cover;
     object-position: top;
+}
+
+.img-label {
+    font-family: var(--font-family-pixel);
+    font-size: 1.2rem;
+    color: #8b6914;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    text-shadow: 2px 2px 0px #000;
+    z-index: 2;
+}
+
+.project-card:hover .img-label {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 2px 2px 0px #000;
+    transform: scale(1.1);
 }
 
 .project-preview-img {

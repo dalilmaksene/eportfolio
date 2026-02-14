@@ -28,49 +28,33 @@
         <section class="card animate-on-scroll" style="margin-bottom: 30px;">
             <h3 style="color: #d4a574; margin-bottom: 20px;">📜 DESCRIPTION DE LA MISSION</h3>
             <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9;">
-                Développement d'un jeu classique "Guess the Number" en deux versions : JavaScript (web) et Python
-                (console).
-                L'utilisateur doit deviner un nombre aléatoire, le programme indiquant si le nombre cherché est plus
-                haut
-                ou plus bas.
-                Le projet met en avant la logique algorithmique et la gestion des entrées utilisateur.
+                Première pierre de mon parcours de développeur, ce projet avait pour objectif la conception intégrale
+                d'un dossier de spécifications techniques et fonctionnelles. Il s'agissait de traduire un besoin client
+                en une documentation structurée : description des cas d'utilisation, inventaire des fonctionnalités,
+                protocoles de tests, matrice des responsabilités et maquettage de l'interface utilisateur.
             </p>
+            <a href="doc_projet/Cahier_des_charges_guess.pdf" class="download-link">📜 TÉLÉCHARGER LE CAHIER DES
+                CHARGES</a>
         </section>
 
-        <!-- 2. Slider Interactif -->
-        <section class="animate-on-scroll">
-            <h3 style="color: #d4a574; margin-bottom: 10px; text-align: center;">🖼️ APERÇU DE LA MISSION</h3>
-            <div class="project-slider">
-                <button class="slider-btn btn-prev" onclick="moveSlider(-1)">◀</button>
-                <div class="slider-track" id="sliderTrack">
-                    <div class="slider-slide"
-                        style="background: #1a1410; display: flex; align-items: center; justify-content: center;">
-                        <span style="font-size: 20px;">🎲</span>
-                    </div>
-                    <div class="slider-slide"
-                        style="background: #1a1410; display: flex; align-items: center; justify-content: center;">
-                        <span style="font-size: 10px; color: #8b6914;">SCREENSHOT_VERSION_WEB</span>
-                    </div>
-                    <div class="slider-slide"
-                        style="background: #1a1410; display: flex; align-items: center; justify-content: center;">
-                        <span style="font-size: 10px; color: #8b6914;">SCREENSHOT_VERSION_PYTHON</span>
-                    </div>
-                </div>
-                <button class="slider-btn btn-next" onclick="moveSlider(1)">▶</button>
+        <section class="card animate-on-scroll" style="margin-bottom: 30px;">
+            <h3 style="color: #d4a574; margin-bottom: 20px;">🎯 OBJECTIFS DU PROJET</h3>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9;">
+                L'ambition était de développer une application web ludique où l'utilisateur doit deviner un nombre
+                généré aléatoirement par le système. Ce travail collaboratif, réalisé en binôme avec Théo Oger, a permis
+                de confronter nos logiques et d'harmoniser nos méthodes de développement.
+            </p>
+            <a href="doc_projet/Répartition_des_taches_repartition_guess.pdf" class="download-link">📜 TÉLÉCHARGER LA
+                RÉPARTITION DES TÂCHES</a>
+        </section>
+
+        <section class="card animate-on-scroll" style="margin-bottom: 30px;">
+            <h3 style="color: #d4a574; margin-bottom: 20px;"> MAQUETTE DU PROJET</h3>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="assets/img/projects/guess_mockup.jpg" alt="Maquette du projet Guess Number"
+                    style="max-width: 100%; border: 3px solid #8b6914; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">
             </div>
         </section>
-
-        <!-- 3. Cahier des charges -->
-        <section class="card animate-on-scroll" style="margin-bottom: 30px;">
-            <h3 style="color: #d4a574; margin-bottom: 20px;">📑 CAHIER DES CHARGES</h3>
-            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9; margin-bottom: 20px;">
-                Le cahier des charges imposait deux implémentations du même jeu dans deux langages différents.
-                L'objectif était de comparer les approches web (JavaScript) et console (Python) pour un même problème
-                algorithmique.
-            </p>
-            <a href="#" class="download-link">📜 TÉLÉCHARGER LE CAHIER DES CHARGES</a>
-        </section>
-
         <!-- 4. Diagramme de Gantt -->
         <section class="card animate-on-scroll" style="margin-bottom: 30px;">
             <h3 style="color: #d4a574; margin-bottom: 20px;">📅 DIAGRAMME DE GANTT</h3>
@@ -99,57 +83,29 @@
                     </div>
                 </div>
 
-                <!-- Ligne 2: Version Python -->
+                <!-- Ligne 2: Version PHP -->
                 <div class="gantt-row">
-                    <span class="gantt-label">Version Python</span>
-                    <div class="gantt-bar-cell" style="grid-column: 3 / 5;">
+                    <span class="gantt-label">Développement PHP</span>
+                    <div class="gantt-bar-cell" style="grid-column: 3 / 7;">
                         <div class="gantt-bar gantt-phase-3" style="animation-delay: 0.2s;">
                             <div class="gantt-tooltip">
-                                🐍 Implémentation Python<br>
-                                Jours 2-3<br>
-                                Version console avec gestion d'erreurs
+                                � Implémentation PHP<br>
+                                Jours 2-5<br>
+                                Version web avec gestion d'erreurs et logique aléatoire
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Ligne 3: Version JavaScript -->
+                <!-- Ligne 3: Tests & Intégration -->
                 <div class="gantt-row">
-                    <span class="gantt-label">Version JavaScript</span>
-                    <div class="gantt-bar-cell" style="grid-column: 4 / 7;">
-                        <div class="gantt-bar gantt-phase-4" style="animation-delay: 0.3s;">
-                            <div class="gantt-tooltip">
-                                ⚡ Implémentation JavaScript<br>
-                                Jours 3-5<br>
-                                Interface web interactive (HTML/CSS/JS)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ligne 4: Interface Web -->
-                <div class="gantt-row">
-                    <span class="gantt-label">Design Interface</span>
-                    <div class="gantt-bar-cell" style="grid-column: 5 / 8;">
-                        <div class="gantt-bar gantt-phase-2" style="animation-delay: 0.4s;">
-                            <div class="gantt-tooltip">
-                                🎨 Design de l'interface web<br>
-                                Jours 4-6<br>
-                                CSS, animations, responsive
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ligne 5: Tests -->
-                <div class="gantt-row">
-                    <span class="gantt-label">Tests & Debug</span>
-                    <div class="gantt-bar-cell" style="grid-column: 8 / 11;">
+                    <span class="gantt-label">Tests & Intégration</span>
+                    <div class="gantt-bar-cell" style="grid-column: 7 / 11;">
                         <div class="gantt-bar gantt-phase-7" style="animation-delay: 0.5s;">
                             <div class="gantt-tooltip">
-                                🐛 Tests des deux versions<br>
+                                🐛 Tests de l'application<br>
                                 Jours 7-9<br>
-                                Cas limites, UX, validation
+                                Cas limites, UX, validation finale
                             </div>
                         </div>
                     </div>
@@ -160,10 +116,7 @@
                         <div class="gantt-legend-color gantt-phase-1"></div>Conception
                     </div>
                     <div class="gantt-legend-item">
-                        <div class="gantt-legend-color gantt-phase-3"></div>Python
-                    </div>
-                    <div class="gantt-legend-item">
-                        <div class="gantt-legend-color gantt-phase-4"></div>JavaScript
+                        <div class="gantt-legend-color gantt-phase-3"></div>Développement PHP
                     </div>
                     <div class="gantt-legend-item">
                         <div class="gantt-legend-color gantt-phase-7"></div>Tests
@@ -174,12 +127,27 @@
 
         <!-- 5. Ce que cela m'a rapporté -->
         <section class="card animate-on-scroll achievement-card" style="margin-bottom: 30px;">
-            <h3 style="color: #228b22; margin-bottom: 20px;">🏆 RÉCOMPENSES & BILAN</h3>
+            <h3 style="color: #228b22; margin-bottom: 20px;">🏆 RETOUR D'EXPÉRIENCE</h3>
             <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9;">
-                Ce projet m'a permis de comparer deux langages sur un même problème et de renforcer ma compréhension
-                des boucles, conditions et gestion des entrées utilisateur.
-                J'ai aussi découvert les bases de la manipulation du DOM en JavaScript pour rendre le jeu interactif
-                dans le navigateur.
+                Cette première incursion dans le développement collaboratif fut fondatrice. J'y ai découvert la
+                nécessité d'une communication fluide et d'une synchronisation constante au sein du binôme.
+                L'application des rituels Agiles nous a offert un cadre structurant pour optimiser notre organisation
+                et garantir la livraison d'un produit conforme aux attentes dans les délais impartis.
+            </p>
+        </section>
+
+        <!-- 6. Organisation du projet -->
+        <section class="card animate-on-scroll" style="margin-bottom: 30px;">
+            <h3 style="color: #d4a574; margin-bottom: 20px;">👥 ORGANISATION DU PROJET</h3>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9;">
+                <strong>Maîtrise d’œuvre :</strong>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9;">
+                Dalil Maksene et Théo Oger
+            </p>
+            <br>
+            <strong>Maîtrise d’ouvrage :</strong>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9;">
+                notre professeur référent.
             </p>
         </section>
 

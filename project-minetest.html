@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serveur Minetest - Détails</title>
+    <title>GSB Doctor - Détails</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -22,192 +22,165 @@
     </header>
 
     <main style="max-width: 900px; margin: 60px auto; padding: 0 20px;">
-        <h1 class="section-title">QUÊTE : SERVEUR MINETEST</h1>
+        <h1 class="section-title">QUÊTE : GSB DOCTOR</h1>
 
         <!-- 1. Description du projet -->
         <section class="card animate-on-scroll" style="margin-bottom: 30px;">
-            <h3 style="color: #d4a574; margin-bottom: 20px;">📜 DESCRIPTION DE LA MISSION</h3>
+            <h3 style="color: #d4a574; margin-bottom: 20px;">📜 ORIGINE & OBJECTIFS</h3>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9; margin-bottom: 15px;">
+                Initié durant l'Atelier Professionnel de seconde année, ce projet fait suite à une présentation sur
+                l'écosystème JavaScript moderne. Le mandat était de concevoir une application modulaire pour le
+                laboratoire Galaxy Swiss Bourdin (GSB), permettant la gestion centralisée des médecins et des visites.
+            </p>
             <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9;">
-                Mise en place et administration d'un serveur Minetest multijoueur. Ce projet couvre l'installation du
-                serveur sur Linux, la configuration réseau, la gestion des mods en Lua et l'administration d'une
-                communauté de joueurs. Un projet orienté réseau et administration système.
+                Le défi technique résidait dans l'architecture découplée : un <strong>backend robuste sous
+                    NodeJS/Express</strong> exposant une API REST, consommé par une <strong>interface frontend
+                    réactive en Angular</strong>.
             </p>
         </section>
 
-        <!-- 2. Slider Interactif -->
-        <section class="animate-on-scroll">
-            <h3 style="color: #d4a574; margin-bottom: 10px; text-align: center;">🖼️ APERÇU DE LA MISSION</h3>
-            <div class="project-slider">
-                <button class="slider-btn btn-prev" onclick="moveSlider(-1)">◀</button>
-                <div class="slider-track" id="sliderTrack">
-                    <div class="slider-slide"
-                        style="background: #1a1410; display: flex; align-items: center; justify-content: center;">
-                        <span style="font-size: 20px;">🖥️</span>
-                    </div>
-                    <div class="slider-slide"
-                        style="background: #1a1410; display: flex; align-items: center; justify-content: center;">
-                        <span style="font-size: 10px; color: #8b6914;">SCREENSHOT_SERVEUR</span>
-                    </div>
-                    <div class="slider-slide"
-                        style="background: #1a1410; display: flex; align-items: center; justify-content: center;">
-                        <span style="font-size: 10px; color: #8b6914;">SCREENSHOT_MODS</span>
-                    </div>
-                </div>
-                <button class="slider-btn btn-next" onclick="moveSlider(1)">▶</button>
+        <!-- 2. Aperçu de l'interface -->
+        <section class="animate-on-scroll" style="margin-bottom: 30px;">
+            <h3 style="color: #d4a574; margin-bottom: 10px; text-align: center;">🖼️ APERÇU DE L'INTERFACE</h3>
+            <div
+                style="text-align: center; border: 3px solid #8b6914; background: #1a1410; padding: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <img src="assets/img/projects/interface_gsb.png" alt="Interface GSB Doctor"
+                    style="max-width: 100%; height: auto;">
             </div>
         </section>
 
-        <!-- 3. Cahier des charges -->
+        <!-- 3. Fonctionnalités & Stack -->
         <section class="card animate-on-scroll" style="margin-bottom: 30px;">
-            <h3 style="color: #d4a574; margin-bottom: 20px;">📑 CAHIER DES CHARGES</h3>
-            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9; margin-bottom: 20px;">
-                Le cahier des charges définissait les objectifs : déployer un serveur stable capable d'accueillir
-                plusieurs joueurs simultanément, configurer les règles réseau (pare-feu, ports), et intégrer des mods
-                personnalisés en Lua pour enrichir l'expérience de jeu.
-            </p>
-            <a href="#" class="download-link">📜 TÉLÉCHARGER LE CAHIER DES CHARGES</a>
+            <h3 style="color: #d4a574; margin-bottom: 20px;">⚙️ ARCHITECTURE & FONCTIONNALITÉS</h3>
+
+            <div style="margin-bottom: 20px;">
+                <h4 style="color: #c0a080; margin-bottom: 10px;">Backend : API REST (NodeJS)</h4>
+                <ul style="list-style: none; padding-left: 0; color: #d4c5b9; line-height: 1.8;">
+                    <li>🔹 <strong>Routing Express</strong> : Endpoints structurés pour les requêtes HTTP.</li>
+                    <li>🔹 <strong>Opérations CRUD</strong> : Manipulation complète des données (Médecins, Rapports,
+                        Médicaments).</li>
+                    <li>🔹 <strong>Logique Métier</strong> : Validation des données et gestion des erreurs serveur.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 style="color: #c0a080; margin-bottom: 10px;">Frontend : SPA (Angular)</h4>
+                <ul style="list-style: none; padding-left: 0; color: #d4c5b9; line-height: 1.8;">
+                    <li>🔸 <strong>Composants Intelligents</strong> : UI modulaire (Fiche Médecin, Tableaux dynamiques).
+                    </li>
+                    <li>🔸 <strong>Injection de Dépendances</strong> : Services dédiés à la communication HTTP.</li>
+                    <li>🔸 <strong>Expérience Utilisateur</strong> : Navigation fluide sans rechargement de page.</li>
+                </ul>
+            </div>
         </section>
 
-        <!-- 4. Diagramme de Gantt -->
+        <!-- 4. Cahier des charges -->
         <section class="card animate-on-scroll" style="margin-bottom: 30px;">
-            <h3 style="color: #d4a574; margin-bottom: 20px;">📅 DIAGRAMME DE GANTT</h3>
+            <h3 style="color: #d4a574; margin-bottom: 20px;">📑 SPÉCIFICATIONS TECHNIQUES</h3>
             <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9; margin-bottom: 20px;">
-                Planification du déploiement sur 10 jours. Survolez les barres pour les détails.
+                La phase de cadrage, étalée sur une semaine, a abouti à la rédaction d'un cahier des charges rigoureux.
+                Ce document de référence détaillait les règles de gestion, le schéma relationnel des données ainsi que
+                le contrat d'interface (endpoints) de l'API.
+            </p>
+            <a href="doc_projet/Cahierdeschargesnodejs.pdf" class="download-link">📜 TÉLÉCHARGER LE CAHIER DES
+                CHARGES</a>
+        </section>
+
+        <!-- 5. Diagramme de Gantt -->
+        <section class="card animate-on-scroll" style="margin-bottom: 30px;">
+            <h3 style="color: #d4a574; margin-bottom: 20px;">📅 PLANIFICATION (GANTT)</h3>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9; margin-bottom: 20px;">
+                Planification sur 4 semaines, alternant développement backend et frontend.
             </p>
 
             <div class="gantt-container">
                 <div class="gantt-header">
-                    <span>TÂCHE</span>
-                    <span>J1</span><span>J2</span><span>J3</span><span>J4</span><span>J5</span>
-                    <span>J6</span><span>J7</span><span>J8</span><span>J9</span><span>J10</span>
+                    <span>PHASE</span>
+                    <span>S1</span><span>S2</span><span>S3</span><span>S4</span>
                 </div>
 
-                <!-- Ligne 1: Installation Linux -->
+                <!-- Semaine 1 -->
                 <div class="gantt-row">
-                    <span class="gantt-label">Install Linux</span>
-                    <div class="gantt-bar-cell" style="grid-column: 2 / 4;">
+                    <span class="gantt-label">Conception</span>
+                    <div class="gantt-bar-cell" style="grid-column: 2 / 3;">
                         <div class="gantt-bar gantt-phase-1" style="animation-delay: 0.1s;">
                             <div class="gantt-tooltip">
-                                🐧 Installation du serveur Linux<br>
-                                Jours 1-2<br>
-                                Debian, mise à jour, dépendances
+                                📝 Conception & Setup<br>
+                                Semaine 1<br>
+                                Cahier des charges, MCD, Setup Node/Angular
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Ligne 2: Config réseau -->
+                <!-- Semaine 2 -->
                 <div class="gantt-row">
-                    <span class="gantt-label">Config Réseau</span>
+                    <span class="gantt-label">Backend API</span>
+                    <div class="gantt-bar-cell" style="grid-column: 2 / 4;">
+                        <div class="gantt-bar gantt-phase-3" style="animation-delay: 0.2s;">
+                            <div class="gantt-tooltip">
+                                ⚙️ Dév API NodeJS<br>
+                                Semaines 1-2<br>
+                                Routes, Modèles, CRUD Docteurs
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Semaine 3 -->
+                <div class="gantt-row">
+                    <span class="gantt-label">Frontend UI</span>
                     <div class="gantt-bar-cell" style="grid-column: 3 / 5;">
-                        <div class="gantt-bar gantt-phase-4" style="animation-delay: 0.2s;">
+                        <div class="gantt-bar gantt-phase-4" style="animation-delay: 0.3s;">
                             <div class="gantt-tooltip">
-                                🌐 Configuration réseau<br>
-                                Jours 2-3<br>
-                                Pare-feu, ports, IP statique, SSH
+                                🎨 Dév Angular<br>
+                                Semaines 2-3<br>
+                                Composants, Services, Affichage
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Ligne 3: Install Minetest -->
+                <!-- Semaine 4 -->
                 <div class="gantt-row">
-                    <span class="gantt-label">Install Minetest</span>
+                    <span class="gantt-label">Intégration</span>
                     <div class="gantt-bar-cell" style="grid-column: 4 / 6;">
-                        <div class="gantt-bar gantt-phase-3" style="animation-delay: 0.3s;">
+                        <div class="gantt-bar gantt-phase-7" style="animation-delay: 0.4s;">
                             <div class="gantt-tooltip">
-                                📦 Installation et config Minetest<br>
-                                Jours 3-4<br>
-                                Compilation, fichier minetest.conf
+                                🔗 Intégration & Tests<br>
+                                Semaine 4<br>
+                                Liaison API-Front, Recette
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Ligne 4: Mods Lua -->
-                <div class="gantt-row">
-                    <span class="gantt-label">Mods Lua</span>
-                    <div class="gantt-bar-cell" style="grid-column: 5 / 8;">
-                        <div class="gantt-bar gantt-phase-5" style="animation-delay: 0.4s;">
-                            <div class="gantt-tooltip">
-                                🔧 Développement de mods Lua<br>
-                                Jours 4-6<br>
-                                Scripting, items custom, règles
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ligne 5: Gestion communauté -->
-                <div class="gantt-row">
-                    <span class="gantt-label">Gestion Joueurs</span>
-                    <div class="gantt-bar-cell" style="grid-column: 7 / 9;">
-                        <div class="gantt-bar gantt-phase-6" style="animation-delay: 0.5s;">
-                            <div class="gantt-tooltip">
-                                👥 Gestion de la communauté<br>
-                                Jours 6-7<br>
-                                Privilèges, modération, logs
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ligne 6: Monitoring & Sécurité -->
-                <div class="gantt-row">
-                    <span class="gantt-label">Sécurité & Logs</span>
-                    <div class="gantt-bar-cell" style="grid-column: 8 / 10;">
-                        <div class="gantt-bar gantt-phase-2" style="animation-delay: 0.6s;">
-                            <div class="gantt-tooltip">
-                                🛡️ Sécurisation du serveur<br>
-                                Jours 7-8<br>
-                                Sauvegardes, monitoring, anti-grief
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ligne 7: Tests charge -->
-                <div class="gantt-row">
-                    <span class="gantt-label">Tests & Stress</span>
-                    <div class="gantt-bar-cell" style="grid-column: 9 / 12;">
-                        <div class="gantt-bar gantt-phase-7" style="animation-delay: 0.7s;">
-                            <div class="gantt-tooltip">
-                                🐛 Tests de charge<br>
-                                Jours 8-10<br>
-                                Multi-joueurs simultanés, stabilité
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gantt-legend">
-                    <div class="gantt-legend-item">
-                        <div class="gantt-legend-color gantt-phase-1"></div>Système
-                    </div>
-                    <div class="gantt-legend-item">
-                        <div class="gantt-legend-color gantt-phase-4"></div>Réseau
-                    </div>
-                    <div class="gantt-legend-item">
-                        <div class="gantt-legend-color gantt-phase-5"></div>Mods
-                    </div>
-                    <div class="gantt-legend-item">
-                        <div class="gantt-legend-color gantt-phase-6"></div>Admin
-                    </div>
-                    <div class="gantt-legend-item">
-                        <div class="gantt-legend-color gantt-phase-7"></div>Tests
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 5. Ce que cela m'a rapporté -->
+        <!-- 6. Bilan -->
         <section class="card animate-on-scroll achievement-card" style="margin-bottom: 30px;">
-            <h3 style="color: #228b22; margin-bottom: 20px;">🏆 RÉCOMPENSES & BILAN</h3>
+            <h3 style="color: #228b22; margin-bottom: 20px;">🏆 BILAN DE COMPÉTENCES</h3>
             <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9;">
-                Ce projet m'a apporté une solide expérience en administration système Linux et en gestion de réseau.
-                J'ai appris à configurer un pare-feu, gérer les connexions SSH, et scripter en Lua pour
-                personnaliser l'expérience serveur. La gestion d'une communauté de joueurs m'a aussi développé
-                des compétences en communication et en modération.
+                L'expérience GSB Doctor m'a permis d'appréhender la réalité du développement Full Stack moderne.
+                J'ai acquis une compréhension fine du cycle de vie d'une requête, de la base de données jusqu'au
+                navigateur client.
+                La collaboration en équipe a également renforcé mes réflexes en matière de gestion de versions (Git) et
+                de coordination Frontend/Backend.
+            </p>
+        </section>
+
+        <!-- 7. Organisation du projet -->
+        <section class="card animate-on-scroll" style="margin-bottom: 30px;">
+            <h3 style="color: #d4a574; margin-bottom: 20px;">👥 ORGANISATION DU PROJET</h3>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9;">
+                <strong>Maîtrise d’œuvre :</strong>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9;">
+                Dalil Maksene et Théo Oger
+            </p>
+            <br>
+            <strong>Maîtrise d’ouvrage :</strong>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9;">
+                Intervenant professionnel
             </p>
         </section>
 
