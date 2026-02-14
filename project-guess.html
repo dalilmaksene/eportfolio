@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Juste Nombre - Détails</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="stone-bg">
+    <header>
+        <nav>
+            <div class="logo">PORTFOLIO</div>
+            <ul class="nav-links">
+                <li><a href="index.html">ACCUEIL</a></li>
+                <li><a href="veille.html">VEILLE TECH</a></li>
+                <li><a href="certifications.html">CERTIFICATIONS</a></li>
+                <li><a href="projets.html">PROJETS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="max-width: 900px; margin: 60px auto; padding: 0 20px;">
+        <h1 class="section-title">QUÊTE : LE JUSTE NOMBRE</h1>
+
+        <!-- 1. Description du projet -->
+        <section class="card animate-on-scroll" style="margin-bottom: 30px;">
+            <h3 style="color: #d4a574; margin-bottom: 20px;">📜 DESCRIPTION DE LA MISSION</h3>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9;">
+                Développement d'un jeu classique "Guess the Number" en deux versions : JavaScript (web) et Python
+                (console).
+                L'utilisateur doit deviner un nombre aléatoire, le programme indiquant si le nombre cherché est plus
+                haut
+                ou plus bas.
+                Le projet met en avant la logique algorithmique et la gestion des entrées utilisateur.
+            </p>
+        </section>
+
+        <!-- 2. Slider Interactif -->
+        <section class="animate-on-scroll">
+            <h3 style="color: #d4a574; margin-bottom: 10px; text-align: center;">🖼️ APERÇU DE LA MISSION</h3>
+            <div class="project-slider">
+                <button class="slider-btn btn-prev" onclick="moveSlider(-1)">◀</button>
+                <div class="slider-track" id="sliderTrack">
+                    <div class="slider-slide"
+                        style="background: #1a1410; display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 20px;">🎲</span>
+                    </div>
+                    <div class="slider-slide"
+                        style="background: #1a1410; display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 10px; color: #8b6914;">SCREENSHOT_VERSION_WEB</span>
+                    </div>
+                    <div class="slider-slide"
+                        style="background: #1a1410; display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 10px; color: #8b6914;">SCREENSHOT_VERSION_PYTHON</span>
+                    </div>
+                </div>
+                <button class="slider-btn btn-next" onclick="moveSlider(1)">▶</button>
+            </div>
+        </section>
+
+        <!-- 3. Cahier des charges -->
+        <section class="card animate-on-scroll" style="margin-bottom: 30px;">
+            <h3 style="color: #d4a574; margin-bottom: 20px;">📑 CAHIER DES CHARGES</h3>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9; margin-bottom: 20px;">
+                Le cahier des charges imposait deux implémentations du même jeu dans deux langages différents.
+                L'objectif était de comparer les approches web (JavaScript) et console (Python) pour un même problème
+                algorithmique.
+            </p>
+            <a href="#" class="download-link">📜 TÉLÉCHARGER LE CAHIER DES CHARGES</a>
+        </section>
+
+        <!-- 4. Diagramme de Gantt -->
+        <section class="card animate-on-scroll" style="margin-bottom: 30px;">
+            <h3 style="color: #d4a574; margin-bottom: 20px;">📅 DIAGRAMME DE GANTT</h3>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9; margin-bottom: 20px;">
+                Planification du développement sur 5 jours. Survolez les barres pour les détails.
+            </p>
+
+            <div class="gantt-container">
+                <div class="gantt-header">
+                    <span>TÂCHE</span>
+                    <span>J1</span><span>J2</span><span>J3</span><span>J4</span><span>J5</span>
+                    <span>J6</span><span>J7</span><span>J8</span><span>J9</span><span>J10</span>
+                </div>
+
+                <!-- Ligne 1: Algo & Logique -->
+                <div class="gantt-row">
+                    <span class="gantt-label">Algo & Logique</span>
+                    <div class="gantt-bar-cell" style="grid-column: 2 / 4;">
+                        <div class="gantt-bar gantt-phase-1" style="animation-delay: 0.1s;">
+                            <div class="gantt-tooltip">
+                                🧠 Conception de l'algorithme<br>
+                                Jours 1-2<br>
+                                Pseudo-code, logique de recherche
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 2: Version Python -->
+                <div class="gantt-row">
+                    <span class="gantt-label">Version Python</span>
+                    <div class="gantt-bar-cell" style="grid-column: 3 / 5;">
+                        <div class="gantt-bar gantt-phase-3" style="animation-delay: 0.2s;">
+                            <div class="gantt-tooltip">
+                                🐍 Implémentation Python<br>
+                                Jours 2-3<br>
+                                Version console avec gestion d'erreurs
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 3: Version JavaScript -->
+                <div class="gantt-row">
+                    <span class="gantt-label">Version JavaScript</span>
+                    <div class="gantt-bar-cell" style="grid-column: 4 / 7;">
+                        <div class="gantt-bar gantt-phase-4" style="animation-delay: 0.3s;">
+                            <div class="gantt-tooltip">
+                                ⚡ Implémentation JavaScript<br>
+                                Jours 3-5<br>
+                                Interface web interactive (HTML/CSS/JS)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 4: Interface Web -->
+                <div class="gantt-row">
+                    <span class="gantt-label">Design Interface</span>
+                    <div class="gantt-bar-cell" style="grid-column: 5 / 8;">
+                        <div class="gantt-bar gantt-phase-2" style="animation-delay: 0.4s;">
+                            <div class="gantt-tooltip">
+                                🎨 Design de l'interface web<br>
+                                Jours 4-6<br>
+                                CSS, animations, responsive
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 5: Tests -->
+                <div class="gantt-row">
+                    <span class="gantt-label">Tests & Debug</span>
+                    <div class="gantt-bar-cell" style="grid-column: 8 / 11;">
+                        <div class="gantt-bar gantt-phase-7" style="animation-delay: 0.5s;">
+                            <div class="gantt-tooltip">
+                                🐛 Tests des deux versions<br>
+                                Jours 7-9<br>
+                                Cas limites, UX, validation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gantt-legend">
+                    <div class="gantt-legend-item">
+                        <div class="gantt-legend-color gantt-phase-1"></div>Conception
+                    </div>
+                    <div class="gantt-legend-item">
+                        <div class="gantt-legend-color gantt-phase-3"></div>Python
+                    </div>
+                    <div class="gantt-legend-item">
+                        <div class="gantt-legend-color gantt-phase-4"></div>JavaScript
+                    </div>
+                    <div class="gantt-legend-item">
+                        <div class="gantt-legend-color gantt-phase-7"></div>Tests
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Ce que cela m'a rapporté -->
+        <section class="card animate-on-scroll achievement-card" style="margin-bottom: 30px;">
+            <h3 style="color: #228b22; margin-bottom: 20px;">🏆 RÉCOMPENSES & BILAN</h3>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9;">
+                Ce projet m'a permis de comparer deux langages sur un même problème et de renforcer ma compréhension
+                des boucles, conditions et gestion des entrées utilisateur.
+                J'ai aussi découvert les bases de la manipulation du DOM en JavaScript pour rendre le jeu interactif
+                dans le navigateur.
+            </p>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="projets.html" class="download-btn">RETOUR AUX PROJETS</a>
+        </div>
+    </main>
+
+    <footer style="margin-top: 60px;">
+        <p>© 2026 - Portfolio Style RPG - Tous droits réservés</p>
+    </footer>
+
+    <script src="particles.js"></script>
+    <script>
+        let currentSlide = 0;
+        const track = document.getElementById('sliderTrack');
+        const totalSlides = document.querySelectorAll('.slider-slide').length;
+
+        function moveSlider(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(20px)";
+            el.style.transition = "all 0.6s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>

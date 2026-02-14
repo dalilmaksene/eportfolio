@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu Vidéo 2D - Détails</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="stone-bg">
+    <header>
+        <nav>
+            <div class="logo">PORTFOLIO</div>
+            <ul class="nav-links">
+                <li><a href="index.html">ACCUEIL</a></li>
+                <li><a href="veille.html">VEILLE TECH</a></li>
+                <li><a href="certifications.html">CERTIFICATIONS</a></li>
+                <li><a href="projets.html">PROJETS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="max-width: 900px; margin: 60px auto; padding: 0 20px;">
+        <h1 class="section-title">QUÊTE : JEU VIDÉO 2D</h1>
+
+        <!-- 1. Description du projet -->
+        <section class="card animate-on-scroll" style="margin-bottom: 30px;">
+            <h3 style="color: #d4a574; margin-bottom: 20px;">📜 DESCRIPTION DE LA MISSION</h3>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9;">
+                Création d'un jeu de plateforme en 2D explorant les mécaniques classiques : sauts, ennemis, et collecte
+                d'objets.
+                Focus sur la fluidité des animations et la précision des contrôles.
+            </p>
+        </section>
+
+        <!-- 2. Slider Interactif -->
+        <section class="animate-on-scroll">
+            <h3 style="color: #d4a574; margin-bottom: 10px; text-align: center;">🖼️ APERÇU DE LA MISSION</h3>
+            <div class="project-slider">
+                <button class="slider-btn btn-prev" onclick="moveSlider(-1)">◀</button>
+                <div class="slider-track" id="sliderTrack">
+                    <div class="slider-slide"><img src="assets/img/projects/jv2d_cave.png" alt="Niveau Caverne"></div>
+                    <div class="slider-slide"><img src="assets/img/projects/jv2d_minotaur.png" alt="Combat Minotaure">
+                    </div>
+                    <div class="slider-slide"><img src="assets/img/projects/jv2d_boss.png" alt="Boss Final"></div>
+                </div>
+
+                <button class="slider-btn btn-next" onclick="moveSlider(1)">▶</button>
+                <div class="slider-dots">
+                    <div class="slider-dot active" onclick="goToSlide(0)"></div>
+                    <div class="slider-dot" onclick="goToSlide(1)"></div>
+                    <div class="slider-dot" onclick="goToSlide(2)"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Cahier des charges -->
+        <section class="card animate-on-scroll" style="margin-bottom: 30px;">
+            <h3 style="color: #d4a574; margin-bottom: 20px;">📑 CAHIER DES CHARGES</h3>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9; margin-bottom: 20px;">
+                Le cahier des charges imposait l'utilisation de C# et Unity, avec une attention particulière portée à la
+                gestion des collisions
+                et à l'implémentation d'un système de points.
+            </p>
+            <a href="#" class="download-link">📜 TÉLÉCHARGER LE CAHIER DES CHARGES</a>
+        </section>
+
+        <!-- 4. Diagramme de Gantt -->
+        <section class="card animate-on-scroll" style="margin-bottom: 30px;">
+            <h3 style="color: #d4a574; margin-bottom: 20px;">📅 DIAGRAMME DE GANTT</h3>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9; margin-bottom: 20px;">
+                Planification du développement sur 3 semaines de stage. Survolez les barres pour les détails.
+            </p>
+
+            <div class="gantt-container">
+                <!-- Header: jours -->
+                <div class="gantt-header">
+                    <span>TÂCHE</span>
+                    <span>J1</span><span>J2</span><span>J3</span><span>J4</span><span>J5</span>
+                    <span>J6</span><span>J7</span><span>J8</span><span>J9</span><span>J10</span>
+                </div>
+
+                <!-- Ligne 1: Game Design -->
+                <div class="gantt-row">
+                    <span class="gantt-label">Game Design</span>
+                    <div class="gantt-bar-cell" style="grid-column: 2 / 4;">
+                        <div class="gantt-bar gantt-phase-1" style="animation-delay: 0.1s;">
+                            <div class="gantt-tooltip">
+                                📝 Game Design Document<br>
+                                Jours 1-2<br>
+                                Mécaniques, règles, concept du jeu
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 2: Création des sprites -->
+                <div class="gantt-row">
+                    <span class="gantt-label">Sprites & Assets</span>
+                    <div class="gantt-bar-cell" style="grid-column: 2 / 5;">
+                        <div class="gantt-bar gantt-phase-2" style="animation-delay: 0.2s;">
+                            <div class="gantt-tooltip">
+                                🎨 Création des sprites Pixel Art<br>
+                                Jours 1-3<br>
+                                Personnage, ennemis, décors, items
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 3: Programmation Personnage -->
+                <div class="gantt-row">
+                    <span class="gantt-label">Perso & Contrôles</span>
+                    <div class="gantt-bar-cell" style="grid-column: 3 / 6;">
+                        <div class="gantt-bar gantt-phase-4" style="animation-delay: 0.3s;">
+                            <div class="gantt-tooltip">
+                                🏃 Programmation du personnage<br>
+                                Jours 2-4<br>
+                                Mouvements, sauts, collisions
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 4: Level Design -->
+                <div class="gantt-row">
+                    <span class="gantt-label">Level Design</span>
+                    <div class="gantt-bar-cell" style="grid-column: 5 / 8;">
+                        <div class="gantt-bar gantt-phase-3" style="animation-delay: 0.4s;">
+                            <div class="gantt-tooltip">
+                                🗺️ Conception des niveaux<br>
+                                Jours 4-6<br>
+                                Tilemap, plateformes, pièges
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 5: IA Ennemis -->
+                <div class="gantt-row">
+                    <span class="gantt-label">IA Ennemis</span>
+                    <div class="gantt-bar-cell" style="grid-column: 6 / 9;">
+                        <div class="gantt-bar gantt-phase-5" style="animation-delay: 0.5s;">
+                            <div class="gantt-tooltip">
+                                👾 Intelligence artificielle<br>
+                                Jours 5-7<br>
+                                Patrouille, détection, attaque
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 6: Animations & FX -->
+                <div class="gantt-row">
+                    <span class="gantt-label">Animations & FX</span>
+                    <div class="gantt-bar-cell" style="grid-column: 7 / 10;">
+                        <div class="gantt-bar gantt-phase-6" style="animation-delay: 0.6s;">
+                            <div class="gantt-tooltip">
+                                ✨ Animations et effets visuels<br>
+                                Jours 6-8<br>
+                                Particules, transitions, feedbacks
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 7: Tests & Polish -->
+                <div class="gantt-row">
+                    <span class="gantt-label">Tests & Polish</span>
+                    <div class="gantt-bar-cell" style="grid-column: 9 / 12;">
+                        <div class="gantt-bar gantt-phase-7" style="animation-delay: 0.7s;">
+                            <div class="gantt-tooltip">
+                                🐛 Tests et finitions<br>
+                                Jours 8-10<br>
+                                Debug, équilibrage, build final
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Légende -->
+                <div class="gantt-legend">
+                    <div class="gantt-legend-item">
+                        <div class="gantt-legend-color gantt-phase-1"></div>Conception
+                    </div>
+                    <div class="gantt-legend-item">
+                        <div class="gantt-legend-color gantt-phase-2"></div>Assets
+                    </div>
+                    <div class="gantt-legend-item">
+                        <div class="gantt-legend-color gantt-phase-4"></div>Gameplay
+                    </div>
+                    <div class="gantt-legend-item">
+                        <div class="gantt-legend-color gantt-phase-5"></div>IA
+                    </div>
+                    <div class="gantt-legend-item">
+                        <div class="gantt-legend-color gantt-phase-7"></div>Tests
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Ce que cela m'a rapporté -->
+        <section class="card animate-on-scroll achievement-card" style="margin-bottom: 30px;">
+            <h3 style="color: #228b22; margin-bottom: 20px;">🏆 RÉCOMPENSES & BILAN</h3>
+            <p style="font-size: var(--font-size-base); line-height: 1.8; color: #d4c5b9;">
+                Ce projet de stage a été déterminant pour ma maîtrise de l'orienté objet en C#.
+                J'ai appris à optimiser les ressources graphiques et à gérer une boucle de jeu complexe.
+            </p>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="projets.html" class="download-btn">RETOUR AUX PROJETS</a>
+        </div>
+    </main>
+
+    <footer style="margin-top: 60px;">
+        <p>© 2026 - Portfolio Style RPG - Tous droits réservés</p>
+    </footer>
+
+    <script src="particles.js"></script>
+    <script>
+        // Slider Logic
+        let currentSlide = 0;
+        const track = document.getElementById('sliderTrack');
+        const totalSlides = document.querySelectorAll('.slider-slide').length;
+        const dots = document.querySelectorAll('.slider-dot');
+
+        function updateDots() {
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+
+        function moveSlider(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDots();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDots();
+        }
+
+        // Auto animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(20px)";
+            el.style.transition = "all 0.6s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
