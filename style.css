@@ -46,7 +46,7 @@ body {
 
 /* Effet de clic - particules pixel */
 .click-particle {
-    position: fixed;
+    position: absolute;
     width: 8px;
     height: 8px;
     background: #d4a574;
@@ -81,6 +81,32 @@ body {
     animation: fade-trail 0.5s ease-out forwards;
 }
 
+/* Trainee de feu pour l'épée légendaire */
+.legendary-fire {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #ffeb3b, #ff9800, #ff5722);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9997;
+    filter: blur(1px);
+    animation: fire-rise 0.6s ease-out forwards;
+    box-shadow: 0 0 10px #ff5722, 0 0 20px #ffeb3b;
+}
+
+@keyframes fire-rise {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(var(--rx), var(--ry)) scale(0) rotate(180deg);
+        opacity: 0;
+    }
+}
+
 @keyframes fade-trail {
     to {
         opacity: 0;
@@ -98,13 +124,38 @@ body {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
     }
 
     to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* RPG QUEST HINTS */
+.quest-hint {
+    font-size: 0.75rem;
+    color: #daa520;
+    font-style: italic;
+    margin: 10px 0;
+    opacity: 0.8;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 1px;
+    transition: opacity 0.3s;
+}
+
+.quest-hint:hover {
+    opacity: 1;
+    color: #ffd700;
+}
+
+.quest-hint::before {
+    content: '📜';
+    font-style: normal;
 }
 
 @keyframes slideInLeft {
@@ -901,10 +952,217 @@ footer {
     box-shadow: 0 6px 0 #000;
 }
 
-.github-btn {
-    background: #3d2817 !important;
-    color: #d4a574 !important;
-    border-color: #8b6914 !important;
+/* --- EASTER EGGS STYLES --- */
+
+/* 1. Weapon Evolution Cursors */
+.weapon-lvl-2,
+.weapon-lvl-2 * {
+    cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTQgMmg0djE4aC00eiIgZmlsbD0iI2E0YTlhNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEiLz48cGF0aCBkPSJNMTAgMjBoMTJ2M0gxMHoiIGZpbGw9IiM2NjYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIi8+PHBhdGggZD0iTTE0IDIzaDR2N2gtNHoiIGZpbGw9IiMzMzMiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+') 16 0, auto !important;
+}
+
+.weapon-lvl-3,
+.weapon-lvl-3 * {
+    cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTQgMmg0djE4aC00eiIgZmlsbD0iI2ZmZDcwMCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEiLz48cGF0aCBkPSJNMTAgMjBoMTJ2M0gxMHoiIGZpbGw9IiNkYWE1MjAiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIi8+PHBhdGggZD0iTTE0IDIzaDR2N2gtNHoiIGZpbGw9IiM4YjY5MTQiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+') 16 0, auto !important;
+}
+
+.weapon-lvl-4,
+.weapon-lvl-4 * {
+    cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTQgMmg0djE4aC00eiIgZmlsbD0iIzAwZjJmZiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEiLz48cGF0aCBkPSJNMTAgMjBoMTJ2M0gxMHoiIGZpbGw9IiMwMDk5ZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIi8+PHBhdGggZD0iTTE0IDIzaDR2N2gtNHoiIGZpbGw9IiMwMDY2Y2MiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+') 16 0, auto !important;
+}
+
+.weapon-lvl-5,
+.weapon-lvl-5 * {
+    cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTQgMmg0djE4aC00eiIgZmlsbD0iI2ZmMDAwMCIgc3Ryb2tlPSIjZmZkNzAwIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTAgMjBoMTJ2M0gxMHoiIGZpbGw9IiNmZjY2MDAiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIi8+PHBhdGggZD0iTTE0IDIzaDR2N2gtNHoiIGZpbGw9IiM4MDAwMDAiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+') 16 0, auto !important;
+}
+
+/* 2. Dungeon Mode */
+.dungeon-mode {
+    filter: sepia(0.5) contrast(1.2);
+}
+
+.dungeon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: radial-gradient(circle 250px at var(--x) var(--y), transparent 80%, rgba(0, 0, 0, 0.98) 100%);
+    z-index: 10000;
+    pointer-events: none;
+    transition: none;
+    /* Remove lag so it follows cursor instantly */
+}
+
+/* 3. Mimic Encounter Styles */
+.mimic-active {
+    position: relative;
+    background: #ff4444 !important;
+    animation: mimic-shake 0.2s infinite;
+    transform: scale(1.2);
+    z-index: 1000;
+    overflow: visible !important;
+    color: transparent !important;
+    /* Hide the text */
+}
+
+.mimic-face {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350%;
+    /* Much larger */
+    height: 350%;
+    background: url('assets/img/mimic-face.png') no-repeat center center;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 1001;
+    filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.7));
+}
+
+@keyframes mimic-shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.boss-bar-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    z-index: 10001;
+    background: rgba(0, 0, 0, 0.8);
+    border: 3px solid #8b0000;
+    padding: 10px;
+    box-shadow: 0 0 20px #ff0000;
+    text-align: center;
+}
+
+.boss-name {
+    color: #ff4444;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px #000;
+}
+
+.boss-hp-bg {
+    height: 20px;
+    background: #330000;
+    border: 2px solid #000;
+}
+
+.boss-hp-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff0000, #880000);
+    transition: width 0.2s;
+}
+
+/* RPG Notifications */
+.rpg-notification {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10002;
+    font-size: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    border: 4px double #d4a574;
+    padding: 20px 40px;
+    animation: notification-bounce 3s cubic-bezier(0.1, 0, 0.3, 1) forwards;
+    pointer-events: none;
+    text-shadow: 3px 3px #000;
+}
+
+@keyframes notification-bounce {
+    0% {
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -200%);
+        opacity: 0;
+    }
+}
+
+.shake {
+    animation: screen-shake 0.2s infinite;
+}
+
+@keyframes screen-shake {
+    0% {
+        transform: translate(2px, 1px) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    50% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    75% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
 }
 
 .github-btn:hover {
