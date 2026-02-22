@@ -559,12 +559,29 @@ a.card {
     gap: 30px;
     margin-bottom: 50px;
     position: relative;
+    align-items: flex-start;
+}
+
+.timeline-date {
+    width: 250px;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: var(--font-size-tiny);
+    color: #d4a574;
+    padding: 8px 12px;
+    background: #1a1410;
+    border: 2px solid #8b6914;
+    box-shadow: 2px 2px 0px #000;
+    height: fit-content;
+    margin-top: 5px;
+    position: relative;
+    z-index: 2;
 }
 
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: 60px;
+    left: 265px;
     top: 30px;
     bottom: -50px;
     width: 3px;
@@ -593,7 +610,7 @@ a.card {
 
 .timeline-content::before {
     position: absolute;
-    left: -48px;
+    left: -32.5px;
     top: 15px;
     width: 35px;
     height: 35px;
@@ -855,6 +872,47 @@ footer {
     /* Ensure all cards in a row have the same height */
 }
 
+.card-buttons {
+    display: flex;
+    gap: 12px;
+    padding: 0 25px 25px;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.card-buttons .pixel-btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px 5px;
+    font-size: var(--font-size-tiny);
+    display: inline-block;
+    background: #8b4513;
+    color: #f4e4c1 !important;
+    border: 3px solid #d4a574;
+    transition: all 0.3s;
+    box-shadow: 0 4px 0 #000;
+    text-shadow: 2px 2px #000;
+}
+
+.card-buttons .pixel-btn:hover {
+    background: #d4a574;
+    color: #2a1f1a !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #000;
+}
+
+.github-btn {
+    background: #3d2817 !important;
+    color: #d4a574 !important;
+    border-color: #8b6914 !important;
+}
+
+.github-btn:hover {
+    background: #8b6914 !important;
+    color: #f4e4c1 !important;
+    border-color: #d4a574 !important;
+}
+
 .project-header-info {
     padding: 25px;
     display: flex;
@@ -943,6 +1001,28 @@ footer {
     .carousel-track {
         width: calc(100px * 16);
         animation: scroll-carousel 15s linear infinite;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 40px;
+    }
+
+    .timeline-date {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .timeline-item::before {
+        left: 20px;
+        top: 0;
+        bottom: -20px;
+    }
+
+    .timeline-content::before {
+        left: -52px;
     }
 }
 
