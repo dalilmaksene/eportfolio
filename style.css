@@ -500,6 +500,19 @@ section {
     margin-top: 40px;
 }
 
+.card-grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .card-grid-2x2 {
+        grid-template-columns: 1fr;
+    }
+}
+
 .card {
     background: #2a1f1a;
     border: 3px solid #8b6914;
