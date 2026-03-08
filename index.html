@@ -366,12 +366,7 @@
         <div class="card">
             <h3>ENVOYER UN MESSAGE</h3>
             <div class="quest-hint">Attention : Certains boutons ont faim de clics... Ne les réveillez pas 7 fois.</div>
-            <form class="contact-form" id="contactForm" action="https://formsubmit.co/contact.dalilmaksene@gmail.com"
-                method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_subject" value="Nouveau message de votre Portfolio BTS SIO !">
-                <input type="hidden" name="_next" value="https://dalilmaksene.github.io/index.html">
+            <form class="contact-form" id="contactForm">
                 <div class="form-group">
                     <label for="name">NOM :</label>
                     <input type="text" id="name" name="name" required placeholder="Votre nom...">
@@ -490,7 +485,32 @@
             });
         }
 
-        // Formulaire de contact - Soumission native activée pour plus de fiabilité
+        // Formulaire de contact - Méthode "Zéro Échec" (Mailto Pro)
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const form = this;
+            const submitBtn = form.querySelector('.submit-btn');
+
+            const name = form.name.value;
+            const email = form.email.value;
+            const subject = form.subject.value;
+            const message = form.message.value;
+
+            // Construction du corps du mail
+            const body = `Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+            // Lien mailto formaté
+            const mailtoLink = `mailto:contact.dalilmaksene@gmail.com?subject=${encodeURIComponent("Portfolio : " + subject)}&body=${encodeURIComponent(body)}`;
+
+            showNotification('OUVERTURE DE VOTRE MESSAGERIE... ⚔️', 'gold');
+
+            // On laisse un petit délai pour la notification
+            setTimeout(() => {
+                window.location.href = mailtoLink;
+                form.reset();
+            }, 1000);
+        });
     </script>
 </body>
 
